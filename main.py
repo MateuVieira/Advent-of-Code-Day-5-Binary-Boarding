@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     result = find_id_seat(data=input_data)
 
-    print(f'Result: {max(result)}')
+    print(f'Result: {set(range(min(result), max(result))) - result}')
 
     end_timer = perf_counter()
     print(f'Time of execution {round(end_timer - start_timer, 5)} seconds')
